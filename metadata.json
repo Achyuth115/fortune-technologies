@@ -1,0 +1,6 @@
+{
+  "name": "Fortune Technologies - Projector & Home Theatre Repair",
+  "description": "Premium service portal for precision projector repair, home theatre systems, AV receivers, and audiovisual IT solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

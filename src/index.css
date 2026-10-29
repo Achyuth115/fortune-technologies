@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom cinematic glow and optical effects */
+.glow-purple {
+  box-shadow: 0 0 35px -5px rgba(57, 32, 128, 0.45);
+}
+
+.glow-red {
+  box-shadow: 0 0 25px -4px rgba(229, 35, 45, 0.4);
+}
+
+.purple-gradient-border {
+  border-image: linear-gradient(to bottom right, rgba(57, 32, 128, 0.35), rgba(229, 35, 45, 0.2)) 1;
+}
+
+/* Infinite Marquee Auto-Scroll for Services Carousel */
+@keyframes marqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-services-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 25s linear infinite;
+  will-change: transform;
+}
+
+.animate-services-marquee:hover,
+.animate-services-marquee:active {
+  animation-play-state: paused;
+}
+
+/* Reviews Infinite Marquee with smooth speed */
+@keyframes reviewsMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-reviews-marquee {
+  display: flex;
+  width: max-content;
+  animation: reviewsMarquee 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-reviews-marquee:hover,
+.animate-reviews-marquee:active,
+.marquee-paused {
+  animation-play-state: paused !important;
+}
